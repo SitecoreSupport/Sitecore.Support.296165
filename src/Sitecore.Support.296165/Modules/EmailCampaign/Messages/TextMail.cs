@@ -21,6 +21,13 @@
       return new TextMail(item, messageItemSourceFactory, managerRootService);
     }
 
+    public override object Clone()
+    {
+      TextMail newMessage = new TextMail(base.InnerItem, base.MessageItemSourceFactory, base.ManagerRootService);
+      this.CloneFields(newMessage);
+      return newMessage;
+    }
+
     protected override PersonalizationManager PersonalizationManager
     {
       get
