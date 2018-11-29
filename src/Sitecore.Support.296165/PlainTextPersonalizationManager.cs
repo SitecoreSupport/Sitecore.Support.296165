@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Web;
-using Sitecore.Diagnostics;
-using Sitecore.Modules.EmailCampaign.Core.Personalization;
-
-namespace Sitecore.Support.Modules.EmailCampaign.Core.Personalization
+﻿namespace Sitecore.Support.Modules.EmailCampaign.Core.Personalization
 {
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Net;
+  using System.Reflection;
+  using System.Web;
+  using Sitecore.Diagnostics;
+  using Sitecore.Modules.EmailCampaign.Core.Personalization;
+
   public class PlainTextPersonalizationManager : Sitecore.Modules.EmailCampaign.Core.Personalization.PersonalizationManager
   {
     private delegate string TokenHandler(string text, string key, IList<TokenMapper> tokenMappers, ref bool moveStartIndex);

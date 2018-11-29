@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Sitecore.Data.Items;
-using Sitecore.Modules.EmailCampaign.Core.HostnameMapping;
-using Sitecore.Modules.EmailCampaign.Factories;
-using Sitecore.Modules.EmailCampaign.Messages;
-using Sitecore.Modules.EmailCampaign.Services;
-
-namespace Sitecore.Support.Modules.EmailCampaign.Core
+﻿namespace Sitecore.Support.Modules.EmailCampaign.Core
 {
+  using Sitecore.Data.Items;
+  using Sitecore.Modules.EmailCampaign.Core.HostnameMapping;
+  using Sitecore.Modules.EmailCampaign.Factories;
+  using Sitecore.Modules.EmailCampaign.Messages;
+  using Sitecore.Modules.EmailCampaign.Services;
+
   public class TypeResolver : Sitecore.Modules.EmailCampaign.Core.TypeResolver
   {
 

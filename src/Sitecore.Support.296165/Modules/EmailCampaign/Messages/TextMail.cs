@@ -1,12 +1,12 @@
-﻿using Sitecore.Support.Modules.EmailCampaign.Core.Personalization;
-
-namespace Sitecore.Support.Modules.EmailCampaign.Messages
+﻿namespace Sitecore.Support.Modules.EmailCampaign.Messages
 {
   using Sitecore.Data.Items;
   using Sitecore.Modules.EmailCampaign.Core.Personalization;
   using Sitecore.Modules.EmailCampaign.Factories;
   using Sitecore.Modules.EmailCampaign.Services;
   using Sitecore.EmailCampaign.Model.Message;
+  using Sitecore.Support.Modules.EmailCampaign.Core.Personalization;
+
   public class TextMail : Sitecore.Modules.EmailCampaign.Messages.TextMail
   {
     private PersonalizationManager _personalizationManager;
@@ -25,7 +25,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Messages
 
     public override object Clone()
     {
-      TextMail newMessage = new TextMail(base.InnerItem, base.MessageItemSourceFactory, base.ManagerRootService);
+      TextMail newMessage = new TextMail(InnerItem, MessageItemSourceFactory, ManagerRootService);
       this.CloneFields(newMessage);
       return newMessage;
     }
@@ -63,7 +63,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Messages
             _personalizationManager.AddTokenMapper(mapper);
           }
         }
-        return this._personalizationManager;
+        return _personalizationManager;
       }
       set { _personalizationManager = value; }
     }
