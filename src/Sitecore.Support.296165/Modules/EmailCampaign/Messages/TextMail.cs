@@ -1,4 +1,6 @@
-﻿namespace Sitecore.Support.Modules.EmailCampaign.Messages
+﻿using Sitecore.Support.Modules.EmailCampaign.Core.Personalization;
+
+namespace Sitecore.Support.Modules.EmailCampaign.Messages
 {
   using Sitecore.Data.Items;
   using Sitecore.Modules.EmailCampaign.Core.Personalization;
@@ -34,7 +36,7 @@
       {
         if (_personalizationManager == null)
         {
-          _personalizationManager = new PersonalizationManager();
+          _personalizationManager = new PlainTextPersonalizationManager();
           if (CustomPersonTokens.Count > 0)
           {
             var mapper = new DictionaryTokenMapper();
