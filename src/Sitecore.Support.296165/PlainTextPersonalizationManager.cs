@@ -24,7 +24,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Core.Personalization
       if (tokenValue != null)
       {
         var value = tokenValue.Value == null ? string.Empty : tokenValue.Value.ToString();
-        text = text.Replace("$" + key + "$", WebUtility.HtmlEncode(value));
+        text = text.Replace("$" + key + "$", value);
       }
       else
       {
